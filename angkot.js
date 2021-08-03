@@ -10,3 +10,24 @@ for (var noAngkot = 1; noAngkot <= jmlAngkot; noAngkot++) {
     console.log("Angkot No. "+noAngkot+" Sedang Tidak Beroperasi");
   }
 }
+
+var penumpang = [];
+
+var tambahPenumbang = function (nama,penumpang) {
+
+  if (penumpang.length == 0) {
+    penumpang.push(nama);
+  }else{
+    for (var i = 0; i < penumpang.length; i++) {
+      if(penumpang[i] == undefined){
+        penumpang[i] = nama;
+      }else if (penumpang[i] == nama) {
+        console.log(nama + " Sudah Ada Didalam Angkot");
+      }else if(i == penumpang.length - 1){
+        penumpang.push(nama);
+      }
+    }
+  }
+
+  return penumpang;
+}
