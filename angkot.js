@@ -13,21 +13,40 @@ for (var noAngkot = 1; noAngkot <= jmlAngkot; noAngkot++) {
 
 var penumpang = [];
 
-var tambahPenumbang = function (nama,penumpang) {
+var tambahPenumpang = function (nama,penumpang) {
 
   if (penumpang.length == 0) {
     penumpang.push(nama);
+    return penumpang;
   }else{
     for (var i = 0; i < penumpang.length; i++) {
       if(penumpang[i] == undefined){
         penumpang[i] = nama;
+        return penumpang;
       }else if (penumpang[i] == nama) {
         console.log(nama + " Sudah Ada Didalam Angkot");
+        return penumpang;
       }else if(i == penumpang.length - 1){
         penumpang.push(nama);
+        return penumpang;
       }
     }
   }
+}
 
-  return penumpang;
+var hapusPenumpang = function (nama,penumpang) {
+  if (penumpang.length == 0) {
+    console.log("Angkot Kosong");
+    return penumpang;
+  }else{
+    for (var i = 0; i < penumpang.length; i++) {
+      if (penumpang[i] == nama) {
+        penumpang[i] = undefined;
+        return penumpang;
+      }else if(i == penumpang.length - 1){
+        console.log("Tidak Ada "+nama+" Dalam Angkot");
+        return penumpang;
+      }
+    }
+  }
 }
