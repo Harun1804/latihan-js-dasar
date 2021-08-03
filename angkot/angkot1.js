@@ -1,5 +1,6 @@
-var nilaiAwal = 1;
-while (nilaiAwal <= 10) {
-  console.log("Angkot No. "+nilaiAwal+" Beroperasi Dengan Baik");
-  nilaiAwal++;
+var jumlahAngkot = 10;
+var noAngkot = 1;
+while (noAngkot <= jumlahAngkot) {
+  console.log("Angkot No. "+noAngkot+" Beroperasi Dengan Baik");
+  noAngkot++;
 }
